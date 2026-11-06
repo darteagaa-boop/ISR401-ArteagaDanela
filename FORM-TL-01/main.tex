@@ -1,0 +1,117 @@
+\documentclass[conference,onecolumn]{IEEEtran}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage[backend=biber,style=ieee,sorting=none]{biblatex}
+\addbibresource{referencias.bib}
+\AtBeginDocument{\spanishplainpercent}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\renewcommand{\IEEEkeywordsname}{Palabras clave}
+
+\title{FORM-TL-01: Taller de tipos de requisitos para la Plataforma de gestión de citas médicas del Policlínico Ribera del Quevedo}
+\author{\IEEEauthorblockN{Danela Dayana Arteaga Alava}\IEEEauthorblockA{Carrera de Software\\
+Facultad de Ciencias de la Computación\\
+Universidad Técnica Estatal de Quevedo, Ecuador\\
+Ingeniería de Requerimientos -- ISR-401}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Actividad formativa individual de la Semana 1. Se clasifican los 20 enunciados del caso «Plataforma de gestión de citas médicas» en tres dimensiones: tipo de requisito (funcional, de calidad o restricción), producto o proceso, y sistema o software. A los requisitos de calidad se les asigna su característica y subcaracterística según ISO/IEC 25010:2023.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Ingeniería de requisitos, tipos de requisitos, ISO/IEC 25010:2023, requisitos de calidad.
+\end{IEEEkeywords}
+
+\section*{Datos generales}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}Y@{}}
+\toprule
+\textbf{Campo} & \textbf{Detalle}\\
+\midrule
+Asignatura & Ingeniería de Requerimientos (ISR-401) · 4.\textsuperscript{o} nivel · Paralelo B\\
+Estudiante & Arteaga Alava Danela Dayana\\
+Docente & Gleiston Cicerón Guerrero Ulloa, PhD\\
+Fecha de cierre & Sábado 7 de noviembre de 2026, 23:59\\
+Repositorio & \url{https://github.com/darteagaa-boop/ISR401-ArteagaDanela}\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Criterios de clasificación}
+Cada enunciado se clasifica en tres dimensiones, siguiendo la distinción usada en la ingeniería de requisitos \cite{ieee29148,glinz2007,sommerville2016}:
+
+\begin{itemize}
+\item \textbf{Tipo:} funcional, que se refiere a lo que hace el sistema; de calidad, que hace énfasis en qué tan bien lo hace, y en este caso se asigna su característica y subcaracterística de ISO/IEC 25010:2023 \cite{iso25010}; o restricción, que es un límite impuesto a la solución o al proyecto.
+\item \textbf{Producto o proceso:} se refiere al sistema que se construye o a la forma de desarrollarlo, ya sea en plazos, validaciones o revisiones.
+\item \textbf{Sistema o software:} es de sistema si para cumplirse intervienen elementos además del software, como el hardware, servicios externos, infraestructura o procedimientos de la organización; en caso contrario, es de software.
+\end{itemize}
+
+En el modelo de calidad de producto de ISO/IEC 25010:2023 las características son: adecuación funcional, eficiencia de desempeño, compatibilidad, capacidad de interacción, fiabilidad, seguridad, mantenibilidad, flexibilidad y protección \cite{iso25010}.
+
+\clearpage
+\section{Tabla de clasificación de los 20 enunciados}
+La Tabla~\ref{tab:clasificacion} presenta la clasificación de cada enunciado con su justificación.
+
+{\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}L{0.04\textwidth}L{0.18\textwidth}L{0.11\textwidth}L{0.15\textwidth}L{0.08\textwidth}L{0.08\textwidth}L{0.27\textwidth}@{}}
+\caption{Clasificación de los enunciados de la Plataforma de gestión de citas médicas}\label{tab:clasificacion}\\
+\toprule
+\textbf{ID} & \textbf{Enunciado} & \textbf{Tipo} & \textbf{Característica; subcaracterística ISO/IEC 25010:2023} & \textbf{Producto / Proceso} & \textbf{Sistema / Software} & \textbf{Justificación}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{ID} & \textbf{Enunciado} & \textbf{Tipo} & \textbf{Característica; subcaracterística ISO/IEC 25010:2023} & \textbf{Producto / Proceso} & \textbf{Sistema / Software} & \textbf{Justificación}\\
+\midrule
+\endhead
+\midrule
+\multicolumn{7}{r@{}}{\emph{Continúa en la página siguiente}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+E01 & Reservar cita eligiendo especialidad, médico, fecha y hora. & Funcional & -- & Producto & Software & Describe un servicio que el software ofrece al paciente.\\
+E02 & Recordatorio por SMS 24~h antes de la cita. & Funcional & -- & Producto & Sistema & Es un comportamiento del producto, pero se cumple con un servicio externo de mensajería, no solo con el software.\\
+E03 & La aplicación debe ser rápida. & Calidad (ambiguo) & Eficiencia de desempeño; comportamiento temporal & Producto & Software & Expresa cómo responde el producto, no qué hace; no es verificable tal como está y requiere cuantificación.\\
+E04 & El recepcionista registra la llegada del paciente en ventanilla. & Funcional & -- & Producto & Software & Define una acción concreta que el software permite a un actor: registrar la llegada.\\
+E05 & Desarrollo en Java 21 con PostgreSQL. & Restricción (tecnológica) & -- & Producto & Software & Limita las opciones de diseño e implementación del producto, pero no es una función ni un atributo de calidad.\\
+E06 & El médico consulta la lista del día y marca consultas atendidas. & Funcional & -- & Producto & Software & Describe funciones observables del software.\\
+E07 & Los datos de salud deben estar seguros. & Calidad (ambiguo) & Seguridad; confidencialidad e integridad & Producto & Software & Atributo de protección de la información; «seguros» no es medible y requiere cuantificación.\\
+E08 & La app móvil funciona en Android 10 o superior. & Restricción (plataforma) & -- & Producto & Software & Fija un entorno operativo mínimo y restringe la solución en lugar de describir una función.\\
+E09 & Cita cancelada con menos de 4~h de anticipación = inasistencia. & Funcional (regla de dominio) & -- & Producto & Software & Regla de negocio que el software debe aplicar al procesar cancelaciones.\\
+E10 & La plataforma debe ser fácil de usar para adultos mayores. & Calidad (ambiguo) & Capacidad de interacción; aprendibilidad, operabilidad, inclusividad & Producto & Software & Atributo de interacción con un grupo de usuarios; el término «fácil» es subjetivo y requiere cuantificación.\\
+E11 & Entrega en un plazo máximo de seis meses. & Restricción (proyecto) & -- & Proceso & Sistema & Restringe el proyecto completo mediante el tiempo.\\
+E12 & Cierre automático de sesión tras 10~min sin actividad. & Funcional (derivado de seguridad) & Seguridad; confidencialidad & Producto & Software & Es un comportamiento concreto y ya verificable que nace de una preocupación de seguridad, pero se expresa como función.\\
+E13 & Quiosco lee la cédula e imprime ticket con número de turno. & Funcional & -- & Producto & Sistema & Función que involucra hardware (pantalla táctil e impresora térmica) además del software.\\
+E14 & La plataforma debe estar siempre disponible. & Calidad (ambiguo) & Fiabilidad; disponibilidad & Producto & Sistema & La disponibilidad depende de servidores, red e infraestructura; «siempre» no es alcanzable ni medible y requiere cuantificación.\\
+E15 & El director genera un reporte mensual de inasistencias por especialidad. & Funcional & -- & Producto & Software & Describe una salida concreta que el software produce para un actor.\\
+E16 & Cada incremento se valida con el director cada dos semanas. & Restricción (proceso) & -- & Proceso & Sistema & Regula cómo se desarrolla y valida el proyecto, no el producto.\\
+E17 & Cumplir la Ley Orgánica de Protección de Datos Personales. & Restricción (legal) & -- & Producto & Sistema & Obligación normativa externa que afecta al software y a los procedimientos de la organización.\\
+E18 & Integrarse sin problemas con el sistema de facturación. & Calidad (ambiguo) & Compatibilidad; interoperabilidad & Producto & Sistema & Intercambio de información con otro sistema existente; el término «sin problemas» no es verificable y requiere cuantificación.\\
+E19 & Si el servidor falla, restablecer el servicio en menos de 30~min sin perder citas confirmadas. & Calidad (cuantificado) & Fiabilidad; recuperabilidad & Producto & Sistema & Tiene métrica de tiempo de recuperación, unidad y umbral (menos de 30~min); involucra infraestructura.\\
+E20 & Todo cambio de código se revisa por otro integrante antes de integrarse. & Restricción (proceso) & -- & Proceso & Software & Prescribe una práctica de desarrollo sobre el código fuente, no un atributo del producto.\\
+\end{longtable}
+}
+
+\textbf{Resumen:} 8 funcionales (E01, E02, E04, E06, E09, E12, E13, E15), 6 de calidad (E03, E07, E10, E14, E18, E19; los cinco primeros son ambiguos) y 6 restricciones (E05, E08, E11, E16, E17, E20). Son de proceso E11, E16 y E20; el resto es de producto.
+
+\printbibliography[title={Referencias}]
+\end{document}
