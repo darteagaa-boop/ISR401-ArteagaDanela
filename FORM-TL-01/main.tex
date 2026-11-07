@@ -30,9 +30,10 @@ Ingeniería de Requerimientos -- ISR-401}}
 
 \begin{document}
 \maketitle
+\nocite{ieee29148,iso25010,glinz2007,sommerville2016}
 
 \begin{abstract}
-Actividad formativa individual de la Semana 1. Se clasifican los 20 enunciados del caso «Plataforma de gestión de citas médicas» en tres dimensiones: tipo de requisito (funcional, de calidad o restricción), producto o proceso, y sistema o software. A los requisitos de calidad se les asigna su característica y subcaracterística según ISO/IEC 25010:2023.
+Actividad formativa individual de la Semana 1. Se clasifican los 20 enunciados del caso «Plataforma de gestión de citas médicas» en tres dimensiones: tipo de requisito (funcional, de calidad o restricción), producto o proceso, y sistema o software. A los requisitos de calidad se les asigna su característica y subcaracterística según ISO/IEC 25010:2023, los cinco requisitos de calidad ambiguos se reescriben con métrica, unidad y umbral, y se registran las discrepancias encontradas al comparar la clasificación con un compañero.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -60,27 +61,26 @@ Repositorio & \url{https://github.com/darteagaa-boop/ISR401-ArteagaDanela}\\
 Cada enunciado se clasifica en tres dimensiones, siguiendo la distinción usada en la ingeniería de requisitos \cite{ieee29148,glinz2007,sommerville2016}:
 
 \begin{itemize}
-\item \textbf{Tipo:} funcional, que se refiere a lo que hace el sistema; de calidad, que hace énfasis en qué tan bien lo hace, y en este caso se asigna su característica y subcaracterística de ISO/IEC 25010:2023 \cite{iso25010}; o restricción, que es un límite impuesto a la solución o al proyecto.
-\item \textbf{Producto o proceso:} se refiere al sistema que se construye o a la forma de desarrollarlo, ya sea en plazos, validaciones o revisiones.
-\item \textbf{Sistema o software:} es de sistema si para cumplirse intervienen elementos además del software, como el hardware, servicios externos, infraestructura o procedimientos de la organización; en caso contrario, es de software.
+\item \textbf{Tipo:} Funcional, que se refiere a lo que hace el sistema, de calidad que hace énfasis en que tan bien lo hace, en este se asigna su característica y subcaracterística de ISO/IEC 25010:2023 \cite{iso25010} o restricción de su límite impuesto a la solución o al proyecto.
+\item \textbf{Producto o proceso:} Se refiere al sistema que se construye o a la forma de desarrollarlo, ya sea en plazos, validaciones o revisiones.
+\item \textbf{Sistema o software:} Es de sistema, si para cumplirse intervienen elementos además del software, como el hardware, servicios externos, infraestructura o procedimientos de la organización.
 \end{itemize}
 
-En el modelo de calidad de producto de ISO/IEC 25010:2023 las características son: adecuación funcional, eficiencia de desempeño, compatibilidad, capacidad de interacción, fiabilidad, seguridad, mantenibilidad, flexibilidad y protección \cite{iso25010}.
+En el modelo de calidad de producto de ISO/IEC 25010:2023 las características son, de adecuación funcional, eficiencia de desempeño, compatibilidad, capacidad de interacción, fiabilidad, seguridad, mantenibilidad, flexibilidad y protección \cite{iso25010}.
 
 \clearpage
 \section{Tabla de clasificación de los 20 enunciados}
-La Tabla~\ref{tab:clasificacion} presenta la clasificación de cada enunciado con su justificación.
 
 {\footnotesize
 \setlength{\tabcolsep}{3pt}
 \begin{longtable}{@{}L{0.04\textwidth}L{0.18\textwidth}L{0.11\textwidth}L{0.15\textwidth}L{0.08\textwidth}L{0.08\textwidth}L{0.27\textwidth}@{}}
 \caption{Clasificación de los enunciados de la Plataforma de gestión de citas médicas}\label{tab:clasificacion}\\
 \toprule
-\textbf{ID} & \textbf{Enunciado} & \textbf{Tipo} & \textbf{Característica; subcaracterística ISO/IEC 25010:2023} & \textbf{Producto / Proceso} & \textbf{Sistema / Software} & \textbf{Justificación}\\
+\textbf{ID} & \textbf{Enunciado} & \textbf{Tipo} & \textbf{Característica ; Subcaracteristica ISO/IEC 25010:2023} & \textbf{Producto / Proceso} & \textbf{Sistema / Software} & \textbf{Justificación}\\
 \midrule
 \endfirsthead
 \toprule
-\textbf{ID} & \textbf{Enunciado} & \textbf{Tipo} & \textbf{Característica; subcaracterística ISO/IEC 25010:2023} & \textbf{Producto / Proceso} & \textbf{Sistema / Software} & \textbf{Justificación}\\
+\textbf{ID} & \textbf{Enunciado} & \textbf{Tipo} & \textbf{Característica ; Subcaracteristica ISO/IEC 25010:2023} & \textbf{Producto / Proceso} & \textbf{Sistema / Software} & \textbf{Justificación}\\
 \midrule
 \endhead
 \midrule
@@ -88,30 +88,86 @@ La Tabla~\ref{tab:clasificacion} presenta la clasificación de cada enunciado co
 \endfoot
 \bottomrule
 \endlastfoot
-E01 & Reservar cita eligiendo especialidad, médico, fecha y hora. & Funcional & -- & Producto & Software & Describe un servicio que el software ofrece al paciente.\\
-E02 & Recordatorio por SMS 24~h antes de la cita. & Funcional & -- & Producto & Sistema & Es un comportamiento del producto, pero se cumple con un servicio externo de mensajería, no solo con el software.\\
-E03 & La aplicación debe ser rápida. & Calidad (ambiguo) & Eficiencia de desempeño; comportamiento temporal & Producto & Software & Expresa cómo responde el producto, no qué hace; no es verificable tal como está y requiere cuantificación.\\
-E04 & El recepcionista registra la llegada del paciente en ventanilla. & Funcional & -- & Producto & Software & Define una acción concreta que el software permite a un actor: registrar la llegada.\\
-E05 & Desarrollo en Java 21 con PostgreSQL. & Restricción (tecnológica) & -- & Producto & Software & Limita las opciones de diseño e implementación del producto, pero no es una función ni un atributo de calidad.\\
-E06 & El médico consulta la lista del día y marca consultas atendidas. & Funcional & -- & Producto & Software & Describe funciones observables del software.\\
-E07 & Los datos de salud deben estar seguros. & Calidad (ambiguo) & Seguridad; confidencialidad e integridad & Producto & Software & Atributo de protección de la información; «seguros» no es medible y requiere cuantificación.\\
-E08 & La app móvil funciona en Android 10 o superior. & Restricción (plataforma) & -- & Producto & Software & Fija un entorno operativo mínimo y restringe la solución en lugar de describir una función.\\
-E09 & Cita cancelada con menos de 4~h de anticipación = inasistencia. & Funcional (regla de dominio) & -- & Producto & Software & Regla de negocio que el software debe aplicar al procesar cancelaciones.\\
-E10 & La plataforma debe ser fácil de usar para adultos mayores. & Calidad (ambiguo) & Capacidad de interacción; aprendibilidad, operabilidad, inclusividad & Producto & Software & Atributo de interacción con un grupo de usuarios; el término «fácil» es subjetivo y requiere cuantificación.\\
-E11 & Entrega en un plazo máximo de seis meses. & Restricción (proyecto) & -- & Proceso & Sistema & Restringe el proyecto completo mediante el tiempo.\\
-E12 & Cierre automático de sesión tras 10~min sin actividad. & Funcional (derivado de seguridad) & Seguridad; confidencialidad & Producto & Software & Es un comportamiento concreto y ya verificable que nace de una preocupación de seguridad, pero se expresa como función.\\
-E13 & Quiosco lee la cédula e imprime ticket con número de turno. & Funcional & -- & Producto & Sistema & Función que involucra hardware (pantalla táctil e impresora térmica) además del software.\\
-E14 & La plataforma debe estar siempre disponible. & Calidad (ambiguo) & Fiabilidad; disponibilidad & Producto & Sistema & La disponibilidad depende de servidores, red e infraestructura; «siempre» no es alcanzable ni medible y requiere cuantificación.\\
-E15 & El director genera un reporte mensual de inasistencias por especialidad. & Funcional & -- & Producto & Software & Describe una salida concreta que el software produce para un actor.\\
-E16 & Cada incremento se valida con el director cada dos semanas. & Restricción (proceso) & -- & Proceso & Sistema & Regula cómo se desarrolla y valida el proyecto, no el producto.\\
-E17 & Cumplir la Ley Orgánica de Protección de Datos Personales. & Restricción (legal) & -- & Producto & Sistema & Obligación normativa externa que afecta al software y a los procedimientos de la organización.\\
-E18 & Integrarse sin problemas con el sistema de facturación. & Calidad (ambiguo) & Compatibilidad; interoperabilidad & Producto & Sistema & Intercambio de información con otro sistema existente; el término «sin problemas» no es verificable y requiere cuantificación.\\
-E19 & Si el servidor falla, restablecer el servicio en menos de 30~min sin perder citas confirmadas. & Calidad (cuantificado) & Fiabilidad; recuperabilidad & Producto & Sistema & Tiene métrica de tiempo de recuperación, unidad y umbral (menos de 30~min); involucra infraestructura.\\
-E20 & Todo cambio de código se revisa por otro integrante antes de integrarse. & Restricción (proceso) & -- & Proceso & Software & Prescribe una práctica de desarrollo sobre el código fuente, no un atributo del producto.\\
+E01 & Reservar cita eligiendo especialidad, médico, fecha y hora. & Funcional & - & Producto & Software & Describe un servicio que el software ofrece al paciente.\\
+E02 & Recordatorio por SMS 24 h antes de la cita. & Funcional & - & Producto & Sistema & Es un comportamiento del producto, pero se cumple con un servicio externo de mensajería, no solo con el software.\\
+E03 & La aplicación debe ser rápida. & Calidad (ambiguo) & Eficiencia de desempeño ; Comportamiento temporal & Producto & Software & Expresa cómo responde el producto, no qué hace, por lo tanto no es verificable tal como está ; requiere cuantificación.\\
+E04 & El recepcionista registra la llegada del paciente en ventanilla. & Funcional & - & Producto & Software & Define una acción concreta que el software permite a un actor registrar la llegada.\\
+E05 & Desarrollo en Java 21 con PostgreSQL. & Restricción (tecnológica) & - & Producto & Software & Limita las opciones de diseño e implementación del producto, pero no es una función ni un atributo de calidad.\\
+E06 & El médico consulta la lista del día y marca consultas atendidas. & Funcional & - & Producto & Software & Describe funciones observables del software.\\
+E07 & Los datos de salud deben estar seguros. & Calidad (ambiguo) & Seguridad ; Confidencialidad e Integridad & Producto & Software & Atributo de protección de la información (seguros) no es medible ; requiere cuantificación.\\
+E08 & La app móvil funciona en Android 10 o superior. & Restricción (plataforma) & - & Producto & Software & Fija un entorno operativo mínimo y restringe la solución en lugar de describir una función.\\
+E09 & Cita cancelada con $<$ 4 h de anticipación = inasistencia. & Funcional (regla de dominio) & - & Producto & Software & Regla de negocio que el software debe aplicar al procesar cancelaciones.\\
+E10 & La plataforma debe ser fácil de usar para adultos mayores. & Calidad (ambiguo) & Capacidad de interacción ; Aprendibilidad, Operabilidad, Inclusividad & Producto & Software & Atributo de interacción con un grupo de usuarios, ya que el termino (fácil) es subjetivo ; requiere cuantificación.\\
+E11 & Entrega en un plazo máximo de seis meses. & Restricción (proyecto) & - & Proceso & Sistema & Restringe el proyecto completo, mediante el tiempo.\\
+E12 & Cierre automático de sesión tras 10 min sin actividad. & Funcional (derivado de seguridad) & Seguridad ; Confidencialidad & Producto & Software & Es un comportamiento concreto y ya verificable que nace de una preocupación de seguridad, pero se expresa como función.\\
+E13 & Quiosco lee la cédula e imprime ticket con número de turno. & Funcional & - & Producto & Sistema & Función que involucra hardware, pantalla táctil, impresora térmica, adicionales del software.\\
+E14 & La plataforma debe estar siempre disponible. & Calidad (ambiguo) & Fiabilidad ; Disponibilidad & Producto & Sistema & La disponibilidad depende de servidores, red e infraestructura, la palabra (siempre) no es alcanzable ni medible ; requiere cuantificación.\\
+E15 & El director genera un reporte mensual de inasistencias por especialidad. & Funcional & - & Producto & Software & Describe una salida concreta que el software produce para un actor.\\
+E16 & Cada incremento se valida con el director cada dos semanas. & Restricción (proceso) & - & Proceso & Sistema & Regula cómo se desarrolla y valida el proyecto, no el producto.\\
+E17 & Cumplir la Ley Orgánica de Protección de Datos Personales. & Restricción (legal) & - & Producto & Sistema & Obligación normativa externa que afecta al software y a los procedimientos de la organización.\\
+E18 & Integrarse sin problemas con el sistema de facturación. & Calidad (ambiguo) & Compatibilidad ; Interoperabilidad & Producto & Sistema & Intercambio de información con otro sistema existente, con el termino (sin problemas) no es verificable ; requiere cuantificación.\\
+E19 & Si el servidor falla, restablecer el servicio en $<$ 30 min sin perder citas confirmadas. & Calidad (cuantificado) & Fiabilidad ; Recuperabilidad & Producto & Sistema & Tiene métrica de tiempo de recuperación, unidad y umbral ($<$ 30) ; involucra infraestructura.\\
+E20 & Todo cambio de código se revisa por otro integrante antes de integrarse. & Restricción (proceso) & - & Proceso & Software & Prescribe una práctica de desarrollo sobre el código fuente, no un atributo del producto.\\
 \end{longtable}
 }
 
-\textbf{Resumen:} 8 funcionales (E01, E02, E04, E06, E09, E12, E13, E15), 6 de calidad (E03, E07, E10, E14, E18, E19; los cinco primeros son ambiguos) y 6 restricciones (E05, E08, E11, E16, E17, E20). Son de proceso E11, E16 y E20; el resto es de producto.
+\textbf{Resumen:} 8 funcionales (E01, E02, E04, E06, E09, E12, E13, E15), 6 de calidad (E03, E07, E10, E14, E18, E19, los cinco primeros son ambiguos) y 6 restricciones (E05, E08, E11, E16, E17, E20). Proceso: E11, E16, E20, el resto es de producto.
+
+\section{Cuantificación de los 5 requisitos de calidad ambiguos}
+Los enunciados E03, E07, E10, E14 y E18 usan términos subjetivos como: (rápida, seguros, fácil de usar, siempre, sin problemas), estos no permiten verificar su cumplimiento. Por esto se reescriben con métrica, unidad y umbral, apoyándose en los datos del caso.
+
+{\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}L{0.07\textwidth}L{0.31\textwidth}L{0.16\textwidth}L{0.09\textwidth}L{0.15\textwidth}L{0.15\textwidth}@{}}
+\caption{Requisitos de calidad reescritos con métrica, unidad y umbral}\label{tab:cuantificacion}\\
+\toprule
+\textbf{ID} & \textbf{Requisito reescrito} & \textbf{Métrica} & \textbf{Unidad} & \textbf{Umbral} & \textbf{Cómo se verifica}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{ID} & \textbf{Requisito reescrito} & \textbf{Métrica} & \textbf{Unidad} & \textbf{Umbral} & \textbf{Cómo se verifica}\\
+\midrule
+\endhead
+\midrule
+\multicolumn{6}{r@{}}{\emph{Continúa en la página siguiente}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+R1 (E03) & Con 300 usuarios conectados simultáneamente, el 95 \% de las consultas de disponibilidad y de las reservas deberá completarse en 2 segundos o menos. & Tiempo de respuesta del 95\% & segundos & $\leq$ 2 s con 300 usuarios concurrentes & Prueba de carga (p. ej., JMeter) que simule 300 usuarios.\\
+R2 (E07) & El 100 \% de los datos de salud se transmitirá cifrado en TLS 1.2 o superior y se almacenará cifrado mediante pruebas de acceso, ningún rol sin autorización podrá leer datos de salud, y el 100 \% de los accesos quedará registrado en bitácora. & \% de datos cifrados, n.º de accesos no autorizados y \% de accesos registrados & \%, número de accesos & 100 \% cifrado, 0 accesos no autorizados y 100 \% registrado & Revisión de configuración y prueba de acceso por cada rol.\\
+R3 (E10) & Al menos el 90 \% de los pacientes de 60 años o más, sin capacitación previa, deberá completar una reserva de cita en 3 minutos o menos y con no más de 1 error, desde un teléfono Android de gama media. & \% de usuarios que completan la tarea, tiempo de tarea y n.º de errores & \%, minutos y errores & $\geq$ 90 \%, $\leq$ 3 min y $\leq$ 1 error & Prueba de usabilidad con al menos 10 pacientes $\geq$ 60 años.\\
+R4 (E14) & La plataforma deberá estar disponible al menos el 99,5 \% del horario de atención mensual, los mantenimientos programados se harán fuera de ese horario. & Disponibilidad = tiempo operativo / tiempo de atención & \% & $\geq$ 99,5 \% mensual ($\approx$ 94 min máx. de caída en 312 h) & Monitoreo automático de disponibilidad cada minuto.\\
+R5 (E18) & Cada cobro registrado se enviará a la interfaz de servicios web del sistema de facturación en 5 segundos o menos, por ende al menos el 99 \% deberá aceptarse en el primer intento y los rechazados se reintentarán automáticamente y no se perderá ningún cobro. & Tiempo de envío, \% aceptado al primer intento y n.º de cobros perdidos & segundos, \% y cobros & $\leq$ 5 s, $\geq$ 99 \% y 0 perdidos & Prueba de integración contra el entorno de pruebas del proveedor y conciliación diaria.\\
+\end{longtable}
+}
+
+\section{Discusión con el compañero}
+Se compararon las clasificaciones con un compañero, la tabla registra las discrepancias encontradas y cómo se resolvieron.
+
+{\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}L{0.05\textwidth}L{0.14\textwidth}L{0.14\textwidth}L{0.31\textwidth}L{0.31\textwidth}@{}}
+\caption{Discrepancias de clasificación y su resolución}\label{tab:discusion}\\
+\toprule
+\textbf{Cód.} & \textbf{Mi clasificación} & \textbf{Clasificación del compañero} & \textbf{Por qué puede haber diferencia} & \textbf{Resolución y argumento}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Cód.} & \textbf{Mi clasificación} & \textbf{Clasificación del compañero} & \textbf{Por qué puede haber diferencia} & \textbf{Resolución y argumento}\\
+\midrule
+\endhead
+\midrule
+\multicolumn{5}{r@{}}{\emph{Continúa en la página siguiente}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+E12 & Funcional, Seguridad, confidencialidad & Calidad, Seguridad, Confidencialidad & El compañero interpreta el requisito desde su finalidad de proteger la información, por mi lado la clasificación considera la conducta concreta que debe ejecutar el software. & Se acuerda clasificarlo como Funcional, porque establece una acción verificable, que es cerrar la sesión tras 10 minutos sin actividad. Seguridad y confidencialidad describen su propósito, no el tipo del enunciado.\\
+E02 & Sistema & Funcional, Producto, Software & El compañero considera que el recordatorio es una función implementada por la aplicación, para mi la clasificación toma en cuenta que el envío depende de un servicio externo de SMS. & Se mantiene Funcional, Producto y Sistema. El software genera y programa el recordatorio, pero su entrega requiere un servicio externo de mensajería, es por eso que intervienen elementos además del software.\\
+E17 & Restricción, Producto & Calidad, Seguridad, Producto & El compañero relaciona el cumplimiento de la ley con la protección de los datos personales, mi clasificación distingue la obligación legal de las características de calidad que se derivan de ella. & Se mantiene Restricción, Producto y Sistema, ya que la ley impone una obligación externa que condiciona el producto y los procedimientos de la organización. Los controles concretos de seguridad se especifican en requisitos separados, como E07-R2.\\
+E08 & Restricción & Calida, Flexibilidad, Adaptabilidad & El compañero interpreta Android 10 o superior como una condición de compatibilidad del producto, para mi la clasificación considera que el enunciado fija una plataforma mínima obligatoria. & Se mantiene Restricción, porque establece el entorno operativo mínimo que debe soportar la solución y limita las opciones de implementación.\\
+E09 & Calidad, Fiabilidad, Recuperabilidad & Funcional, Producto, Sistema & El compañero considera que restablecer el servicio y conservar las citas describe una acción que el sistema debe ejecutar, por otro lado mi clasificación se centra en la capacidad de recuperación ante fallos y en el tiempo máximo establecido. & Se mantiene Calidad, Fiabilidad, Recuperabilidad, Producto y Sistema. El requisito establece un objetivo verificable de recuperación y cero citas confirmadas perdidas, por ello expresa qué tan bien se recupera el sistema, no una función de negocio independiente.\\
+\end{longtable}
+}
 
 \printbibliography[title={Referencias}]
 \end{document}
