@@ -58,6 +58,92 @@ Repositorio & \url{https://github.com/darteagaa-boop/ISR401-ArteagaDanela}\\
 \end{tabularx}
 \end{table}
 
+\section{Resumen analítico de la norma ISO/IEC/IEEE 29148:2018}
+
+\subsection{Qué es un requisito}
+
+La norma ISO/IEC/IEEE 29148:2018 trata los procesos y productos de la ingeniería de requisitos para sistemas y software durante todo su ciclo de vida. Parte de una definición sencilla, dice que un requisito es un enunciado que traduce o expresa una necesidad junto con las restricciones y condiciones que la acompañan \cite[\nopp cl.~3.1.19]{ieee29148}. Es decir, no basta con decir qué se necesita, también hay que indicar bajo qué circunstancias y con qué límites. La norma aclara que los requisitos existen en distintos niveles del sistema, desde las necesidades de las partes interesadas hasta los elementos de software.
+
+\subsection{Qué es un requisito bien formado}
+
+Según la cláusula 5.2.4, un requisito bien formado es aquel que el sistema debe cumplir para resolver un problema, lograr un objetivo o atender una preocupación de una parte interesada, que está calificado por condiciones medibles y acotado por restricciones, que describe una capacidad o desempeño del sistema y no del usuario \cite[\nopp cl.~5.2.4]{ieee29148}. Cuando se escribe en lenguaje natural, debe tener un sujeto y un verbo, e indicar qué debe hacerse o qué restricción se impone.
+
+La norma también propone acordar palabras clave. Los requisitos obligatorios usan “shall”, mientras que “Will” se reserva para hechos o propósitos, “should” para preferencias que no son requisitos y “may” para sugerencias. También recomienda escribir en voz activa, usar enunciados positivos en lugar de negativos como “shall not” y evitar expresiones como “shall be able to” \cite[\nopp cl.~5.2.4]{ieee29148}. En español, “deberá” que usé en mis requisitos cumple el papel de “shall”.
+
+\subsection{Características de un requisito individual}
+
+La cláusula 5.2.5 establece nueve características que debe tener cada requisito \cite[\nopp cl.~5.2.5]{ieee29148}.
+
+\begin{itemize}
+\item \textbf{Necesario:} Define una capacidad, característica, restricción o factor de calidad esencial, y si se elimina queda un vacío que ningún otro requisito cubre.
+\item \textbf{Apropiado:} Su nivel de detalle corresponde al nivel de la entidad a la que se refiere, sin imponer decisiones de diseño innecesarias.
+\item \textbf{No ambiguo:} Solo se puede interpretar de una manera.
+\item \textbf{Completo:} Se entiende por sí mismo sin necesitar información adicional.
+\item \textbf{Singular:} Expresa una sola capacidad, característica, restricción o factor de calidad, aunque puede tener varias condiciones.
+\item \textbf{Factible:} Se puede lograr dentro de las restricciones de costo, tiempo y tecnología con un riesgo aceptable.
+\item \textbf{Verificable:} Está redactado de forma que se pueda demostrar que se cumplió, y esto es más fácil cuando es medible.
+\item \textbf{Correcto:} Representa con exactitud la necesidad de la que proviene.
+\item \textbf{Conforme:} Sigue la plantilla y el estilo aprobados para escribir requisitos.
+\end{itemize}
+
+\subsection{Características de un conjunto de requisitos}
+
+Además de revisar cada requisito por separado, la cláusula 5.2.6 indica que el conjunto debe ser completo, es decir, sin pendientes del tipo “por definir”, consistente, sin conflictos ni duplicados, con unidades homogéneas y con los términos usados siempre con el mismo significado, factible en su totalidad, comprensible y validable, de modo que cumplirlo lleve a satisfacer las necesidades de las partes interesadas \cite[\nopp cl.~5.2.6]{ieee29148}. La norma señala que revisar estas características evita el crecimiento descontrolado de requisitos durante el proyecto.
+
+\subsection{Términos ambiguos que la norma prohíbe}
+
+La cláusula 5.2.7 establece que los requisitos deben decir qué se necesita y no cómo construirlo, y que se deben evitar los términos vagos porque hacen que un requisito sea difícil o imposible de verificar \cite[\nopp cl.~5.2.7]{ieee29148}. Los tipos de términos que señala son:
+
+\begin{itemize}
+\item Superlativos.
+\item Lenguaje subjetivo.
+\item Pronombres vagos.
+\item Adverbios, adjetivos ambiguos y enunciados lógicos ambiguos.
+\item Términos abiertos que no se pueden verificar.
+\item Frases comparativas.
+\item Escapatorias.
+\item Términos de totalidad.
+\item Referencias incompletas, sin fecha ni versión.
+\end{itemize}
+
+También exige documentar los supuestos de cada requisito en sus atributos \cite[\nopp cl.~5.2.7]{ieee29148}, \cite[\nopp cl.~5.2.8]{ieee29148}.
+
+\subsection{Análisis}
+
+Lo más valioso de la norma es que convierte la calidad de un requisito en algo revisable. Al aplicarla a Apple Music, un enunciado como “la aplicación debe ser rápida” queda descartado por usar lenguaje subjetivo, y “el servicio debe estar siempre disponible” por usar un término de totalidad. Por eso reescribí esas ideas como R05 y R06, con métrica y umbral. A la vez, la norma no impone un único formato, reconoce que en contextos ágiles los requisitos pueden escribirse como historias de usuario \cite[\nopp cl.~5.2.4]{ieee29148}, lo que muestra que lo importante no es la forma, sino que cada requisito sea necesario, claro y verificable.
+
+\section{Glosario de 10 términos de la cláusula 3}
+
+{\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}L{0.20\textwidth}L{0.07\textwidth}L{0.34\textwidth}L{0.34\textwidth}@{}}
+\caption{Glosario de términos de ISO/IEC/IEEE 29148:2018 con ejemplos en Apple Music}\label{tab:glosario}\\
+\toprule
+\textbf{Término} & \textbf{Cláusula} & \textbf{Definición según la norma} & \textbf{Ejemplo propio en Apple Music}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Término} & \textbf{Cláusula} & \textbf{Definición según la norma} & \textbf{Ejemplo propio en Apple Music}\\
+\midrule
+\endhead
+\midrule
+\multicolumn{4}{r@{}}{\emph{Continúa en la página siguiente}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+\textbf{Atributo (attribute)} & 3.1.2 & Propiedad o característica de una entidad que se puede distinguir de forma cuantitativa o cualitativa, por una persona o por un medio automático. & El tiempo que tarda en empezar a sonar una canción es un atributo medible de la reproducción en Apple Music.\\
+\textbf{Condición (condition)} & 3.1.6 & Atributo medible, cualitativo o cuantitativo, que se fija para un requisito e indica la circunstancia en la que ese requisito se aplica. & En R05, “con una conexión de 10 Mbps o superior” es la condición bajo la cual la canción debe iniciar en 2 segundos o menos.\\
+\textbf{Restricción (constraint)} & 3.1.7 & Limitación impuesta desde fuera sobre el sistema, su diseño, su implementación o el proceso con que se desarrolla. & R12 obliga a que la aplicación funcione desde iOS 17 y Android 10, lo que limita las tecnologías que se pueden usar.\\
+\textbf{Requisito (requirement)} & 3.1.19 & Enunciado que traduce o expresa una necesidad junto con las restricciones y condiciones asociadas a ella. & R03 expresa mi necesidad de escuchar música en viajes largos sin internet como una función que el sistema deberá cumplir.\\
+\textbf{Obtención de requisitos (requirements elicitation)} & 3.1.20 & Uso de técnicas sistemáticas, como prototipos y encuestas estructuradas, para identificar y documentar las necesidades del cliente y del usuario final. & Hacer una encuesta a compañeros que usan Apple Music para saber qué funciones usan sin conexión y cuáles les faltan.\\
+\textbf{Trazabilidad de requisitos (requirements traceability)} & 3.1.23 & Identificar y documentar de qué requisito superior se deriva un requisito y a qué requisitos inferiores se asigna dentro del conjunto. & La necesidad “escuchar música sin internet” da origen a R03, y de R03 se podría derivar un requisito sobre el espacio de almacenamiento de las descargas.\\
+\textbf{Validación de requisitos (requirements validation)} & 3.1.25 & Confirmar que los requisitos, uno por uno y en conjunto, definen el sistema correcto según lo que buscan las partes interesadas. & Mostrar a usuarios la función de letras sincronizadas descrita en R04 y confirmar que es realmente lo que necesitan.\\
+\textbf{Verificación de requisitos (requirements verification)} & 3.1.26 & Confirmar mediante revisión que los requisitos, están bien formados. & Revisar que R06 tenga métrica y umbral y que no use palabras como “siempre”:\\
+\textbf{Parte interesada (stakeholder)} & 3.1.28 & Persona u organización que tiene un derecho, una participación, un reclamo o un interés en el sistema, para que este cumpla sus necesidades y expectativas. & Los suscriptores, los artistas y sellos discográficos que licencian su música, Apple como proveedor y las autoridades de protección de datos.\\
+\textbf{Usuario (user)} & 3.1.35 & Persona o grupo que interactúa con un sistema o se beneficia de él durante su uso. & Yo, como estudiante que usa Apple Music a diario para escuchar música mientras estudio.\\
+\end{longtable}
+}
+
 \section{Descripción del sistema}
 Apple Music es un servicio de música por suscripción de Apple que permite escuchar canciones en streaming, guardarlas en una biblioteca personal, crear listas de reproducción y descargarlas para escucharlas sin conexión. Funciona en la aplicación para iPhone, en computadoras y desde el navegador, y también tiene aplicación para Android.
 
