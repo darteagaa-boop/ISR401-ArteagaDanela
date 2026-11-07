@@ -1,0 +1,92 @@
+\documentclass[conference,onecolumn]{IEEEtran}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage[backend=biber,style=ieee,sorting=none]{biblatex}
+\addbibresource{referencias.bib}
+\AtBeginDocument{\spanishplainpercent}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\renewcommand{\IEEEkeywordsname}{Palabras clave}
+
+\title{TA-IND-01: ISO/IEC/IEEE 29148 y tipos de requisitos de Apple Music}
+\author{\IEEEauthorblockN{Danela Dayana Arteaga Alava}\IEEEauthorblockA{Carrera de Software\\
+Facultad de Ciencias de la Computación\\
+Universidad Técnica Estatal de Quevedo, Ecuador\\
+Ingeniería de Requerimientos -- ISR-401}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Trabajo individual que aplica la norma ISO/IEC/IEEE 29148:2018 a Apple Music, un sistema de uso frecuente por la autora. Incluye la descripción del sistema, un resumen analítico de la norma, un glosario, la formulación y clasificación de 15 requisitos con sus criterios de aceptación, la autoevaluación de cada requisito y una reflexión final.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Ingeniería de requisitos, ISO/IEC/IEEE 29148:2018, ISO/IEC 25010:2023, tipos de requisitos, Apple Music.
+\end{IEEEkeywords}
+
+\section*{Datos generales}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}Y@{}}
+\toprule
+\textbf{Campo} & \textbf{Detalle}\\
+\midrule
+Asignatura & Ingeniería de Requerimientos (ISR-401) · 4.\textsuperscript{o} nivel · Paralelo B\\
+Estudiante & Arteaga Alava Danela Dayana\\
+Docente & Gleiston Cicerón Guerrero Ulloa, PhD\\
+Sistema analizado & Apple Music\\
+Fecha de cierre & Sábado 7 de noviembre de 2026, 23:59\\
+Repositorio & \url{https://github.com/darteagaa-boop/ISR401-ArteagaDanela}\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Descripción del sistema}
+Apple Music es un servicio de música por suscripción de Apple que permite escuchar canciones en streaming, guardarlas en una biblioteca personal, crear listas de reproducción y descargarlas para escucharlas sin conexión. Funciona en la aplicación para iPhone, en computadoras y desde el navegador, y también tiene aplicación para Android.
+
+Utilizo Apple Music casi todos los días desde mi celular para escuchar música mientras realizo mis actividades diarias, estudio o cuando estoy haciendo las tareas del hogar. Lo uso principalmente para buscar mis canciones favoritas, crear listas de reproducción y escuchar música. También aprovecho la opción de descargar canciones para escucharlas cuando no tengo conexión a internet, esta opción me sirve mucho cuando tengo un viaje largo.
+
+Las funciones principales que se analizan son la búsqueda en el catálogo, biblioteca y listas de reproducción, descargas sin conexión, letras sincronizadas, sincronización entre dispositivos y gestión de la suscripción.
+
+\section{Capturas del sistema}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth]{figuras/captura-inicio.jpg}
+\caption{Pantalla de inicio de Apple Music. Fuente: captura propia.}
+\label{fig:inicio}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth]{figuras/captura-biblioteca.jpg}
+\caption{Biblioteca de Apple Music con álbumes y listas de reproducción. Fuente: captura propia.}
+\label{fig:biblioteca}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth]{figuras/captura-reproductor.jpg}
+\caption{Reproductor de Apple Music con la letra sincronizada. Fuente: captura propia.}
+\label{fig:reproductor}
+\end{figure}
+
+\printbibliography[title={Referencias}]
+\end{document}
