@@ -239,5 +239,57 @@ Total & 6 tipos distintos & 15\\
 \end{longtable}
 }
 
+\section{Autoevaluación de los requisitos}
+
+Cada requisito se revisó con las características de un requisito individual, las recomendaciones de redacción y los criterios de lenguaje. Cuando se encontró un problema, se escribió una versión corregida \cite[\nopp cl.~5.2.5]{ieee29148}, \cite[\nopp cl.~5.2.4]{ieee29148}, \cite[\nopp cl.~5.2.7]{ieee29148}.
+
+{\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}L{0.05\textwidth}L{0.08\textwidth}L{0.15\textwidth}L{0.29\textwidth}L{0.36\textwidth}@{}}
+\caption{Autoevaluación de los requisitos de Apple Music}\label{tab:autoevaluacion}\\
+\toprule
+\textbf{ID} & \textbf{Evaluación} & \textbf{Característica afectada} & \textbf{Problema encontrado} & \textbf{Versión corregida}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{ID} & \textbf{Evaluación} & \textbf{Característica afectada} & \textbf{Problema encontrado} & \textbf{Versión corregida}\\
+\midrule
+\endhead
+\midrule
+\multicolumn{5}{r@{}}{\emph{Continúa en la página siguiente}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+\textbf{R01} & Mejorable & Apropiado (cl. 5.2.5) \newline Qué y no cómo (cl. 5.2.7) & “Deberá permitir al usuario buscar” describe una acción del usuario y no del sistema, y “escribiendo texto en el buscador” indica cómo hacerlo. & El sistema deberá mostrar las canciones, álbumes, artistas y listas de reproducción del catálogo cuyo nombre contenga el texto de búsqueda ingresado por el usuario.\\
+\textbf{R02} & Mejorable & Singular (cl. 5.2.5) & Reúne tres capacidades distintas en un solo requisito: crear, renombrar y eliminar listas. & R02.1 El sistema deberá crear una lista de reproducción en la biblioteca del usuario cuando este lo solicite. \newline R02.2 El sistema deberá cambiar el nombre de una lista de reproducción del usuario cuando este lo solicite. \newline R02.3 El sistema deberá eliminar una lista de reproducción del usuario cuando este lo solicite.\\
+\textbf{R03} & Mejorable & Apropiado (cl. 5.2.5) & “Deberá permitir descargar” no indica quién descarga ni qué hace el sistema exactamente. & El sistema deberá descargar al dispositivo las canciones de la biblioteca que el usuario seleccione, para reproducirlas sin conexión a internet mientras la suscripción esté activa.\\
+\textbf{R04} & Mejorable & Verificable (cl. 5.2.5) & “Sincronizada con el audio” no tiene un margen medible, por lo que no se puede comprobar con precisión. & El sistema deberá mostrar la letra de la canción en reproducción, cuando la letra esté disponible, con un desfase máximo de 0,5 segundos entre la línea resaltada y el audio.\\
+\textbf{R05} & Cumple & - & Tiene condición medible (conexión de 10 Mbps), métrica (tiempo de inicio), unidad (segundos) y umbral (2 s en el 95 \% de los casos). & Se mantiene igual.\\
+\textbf{R06} & Cumple & - & Reemplaza el término de totalidad “siempre” por un porcentaje medible en un periodo definido. & Se mantiene igual.\\
+\textbf{R07} & Cumple & - & Es verificable y fija un estándar de cifrado con su versión mínima. & Se mantiene igual.\\
+\textbf{R08} & Cumple & - & Tiene métrica, unidad y umbral claros, y la condición de la misma cuenta. & Se mantiene igual.\\
+\textbf{R09} & Mejorable & Lenguaje (cl. 5.2.4) & “Deberá poder” equivale a “shall be able to”, que la norma recomienda evitar, y el sujeto es el usuario y no el sistema. & La interfaz de creación de listas de reproducción deberá permitir que al menos el 90 \% de los usuarios nuevos, sin ayuda, cree una lista y le agregue 3 canciones en 2 minutos o menos.\\
+\textbf{R10} & Mejorable & Enunciado positivo (cl. 5.2.4) \newline Completo (cl. 5.2.5) & Está redactado en negativo “no deberá consumir” y no indica en qué teléfono se mide, por lo que el resultado puede cambiar según el equipo. & Durante la reproducción continua con la pantalla apagada, la aplicación deberá consumir como máximo el 5 \% de la batería por hora en un teléfono de gama media con batería de 4000 mAh.\\
+\textbf{R11} & Mejorable & No ambiguo y singular (cl. 5.2.5) & La frase “controlar reproducir, pausar” se entiende con dificultad y junta dos interfaces distintas en un solo requisito. & R11.1 El sistema deberá ejecutar las acciones de reproducir, pausar, siguiente y anterior desde la pantalla de bloqueo del teléfono. \newline R11.2 El sistema deberá ejecutar las acciones de reproducir, pausar, siguiente y anterior desde los botones de auriculares Bluetooth.\\
+\textbf{R12} & Cumple & - & Expresa con claridad la restricción de plataforma con versiones mínimas verificables. & Se mantiene igual.\\
+\textbf{R13} & Mejorable & Singular (cl. 5.2.5) \newline Enunciado positivo (cl. 5.2.4) \newline Lenguaje lógico (cl. 5.2.7) & Usa una forma negativa “impedir” y une dos condiciones. Además, la justificación “para respetar las licencias” debería ir como atributo y no dentro del requisito. & R13.1 El sistema deberá reproducir las canciones descargadas únicamente dentro de la aplicación. \newline R13.2 El sistema deberá bloquear la reproducción de las canciones descargadas cuando la suscripción del usuario se cancele.\\
+\textbf{R14} & Mejorable & Referencia incompleta (cl. 5.2.7) & Menciona la ley sin indicar su fecha ni su publicación oficial. & El tratamiento de los datos personales de los usuarios en Ecuador deberá cumplir la Ley Orgánica de Protección de Datos Personales, publicada en el Registro Oficial, Quinto Suplemento n.º 459, del 26 de mayo de 2021.\\
+\textbf{R15} & Cumple & - & Expresa una regla de negocio clara y verificable con su criterio de aceptación. & Se mantiene igual.\\
+\end{longtable}
+}
+
+\subsection{Evaluación del conjunto de requisitos}
+
+Como conjunto \cite[\nopp cl.~5.2.6]{ieee29148}, los requisitos no tienen pendientes por definir, las unidades son homogéneas y cubren seis tipos distintos. Sin embargo, el conjunto no es del todo consistente en su terminología, porque usa “el sistema”, “la aplicación” y “el servicio de streaming” para referirse a lo mismo. Para corregirlo, se propone usar “el sistema” en todos los requisitos y reservar “la aplicación móvil” solo para los que se refieren al teléfono, como R10 y R12.
+
+En resumen, 6 de los 15 requisitos cumplen con las características de la norma y 9 son mejorables. Los problemas más frecuentes fueron juntar varias capacidades en un solo requisito, redactar en negativo y describir la acción del usuario en lugar de la del sistema.
+
+\section{Reflexión}
+Al realizar este trabajo, aprendí que elaborar requisitos para un sistema no consiste solamente en describir las funciones que tiene una aplicación, sino en establecer claramente qué debe hacer y cómo se puede comprobar que la aplicación funciona correctamente. Algo que tuve que tener muy en cuenta fue la importancia de que los requisitos sean verificables, especialmente los de calidad, ya que deben tener métricas y valores específicos. La norma ISO/IEC/IEEE 29148 me ayudó a entender que un requisito bien formado debe ser necesario, no ambiguo, factible y verificable. Por otro lado, aprendí a diferenciar los distintos tipos de requisitos, como los funcionales, legales, técnicos y de calidad, y a relacionarlos con las características de la norma ISO/IEC 25010:2023.
+
+Una de las partes que más me costó fue establecer las métricas y los umbrales para los requisitos de calidad, porque no era suficiente con decir que Apple Music debía ser rápido, seguro o fácil de utilizar, sino que tenía que expresar esas condiciones mediante números y porcentajes específicos. Por ejemplo, establecer que la reproducción debía iniciar en dos segundos o menos en el 95 \% de los casos me hizo pensar en cómo convertir una característica general en algo que realmente se pueda medir. También fue un poco difícil definir criterios de aceptación adecuados para cada requisito.
+
+Este trabajo me permitió comprender mejor una aplicación que utilizo casi todos los días y observar que detrás de su funcionamiento existen muchos aspectos que deben analizarse y cumplirse. Considero que este aprendizaje me servirá en mi carrera, porque me ayudará a analizar sistemas y plantear requisitos claros, medibles y útiles.
+
 \printbibliography[title={Referencias}]
 \end{document}
