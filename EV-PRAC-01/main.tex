@@ -1,0 +1,153 @@
+\documentclass[conference,onecolumn]{IEEEtran}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\title{EV-PRAC-01: Evaluación de la Unidad I}
+\author{\IEEEauthorblockN{Danela Dayana Arteaga Alava}\IEEEauthorblockA{Carrera de Software\\
+Facultad de Ciencias de la Computación\\
+Universidad Técnica Estatal de Quevedo, Ecuador\\
+Ingeniería de Requerimientos -- ISR-401}}
+
+\begin{document}
+\maketitle
+
+\noindent\emph{Esta es la transcripción fiel de la prueba escrita a mano el 18 de noviembre de 2026; las fotografías de las hojas están en la carpeta evidencias/ del repositorio.}
+
+\bigskip
+
+% ===================== Hoja 1 =====================
+\noindent\textbf{Hoja 1}
+
+\noindent Nombre: Danela Dayana Arteaga Alava\\
+Fecha: 18 de Noviembre del 2026\\
+Curso: 4 to Paralelo “B”
+
+\begin{center}
+Evaluación de la Unidad I (EV-PRAC-01)
+\end{center}
+
+\section*{T1.}
+
+\noindent a) Explique con sus palabras
+
+Según ISO/IEC/IEEE 29148 un requisito es una necesidad o condición que deberá cumplir un sistema para satisfacer lo necesitado o acordado con los interesados.
+
+Decisión de si E7 y E12 son requisitos del producto ALERTARIO
+
+\noindent E7: No es un requisito del producto, ya que solo describe el procedimiento que actualmente se utiliza para medir.
+
+\noindent E12: No es un requisito de producto, es un requisito de proceso, ya que este nos describe como se realizarán las reuniones y quién firmará el acta de requisitos.
+
+\medskip
+\noindent b) Explique qué describe la especificación de requisitos de los interesados.
+
+\noindent StRS: Describe las necesidades y expectativas de los interesados, por ejemplo los presidentes barriales, ya que ellos necesitan alertas.
+
+\noindent SyRS: Describe los requisitos del sistema, incluyendo hardware, software e interfaces, por ejemplo las estaciones HL-20 que envian lecturas con el protocolo LoRaWAN, de eso el interesado es el técnico de TIC
+
+\noindent SRS: Describe las funciones y caracteristicas que debe cumplir el software, por ejemplo el jefe de la unidad de GR, ya que genera informes mensuales en formato PDF
+
+\medskip
+\noindent c) Para cada hecho H1 a H5
+
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Hecho} & \textbf{Proceso} & \textbf{Pohl}\\
+\midrule
+H1 & Elicitación & Central\\
+H2 & Analisis y negociación & Central\\
+H3 & Especificación & Central\\
+H4 & Validación & Central\\
+H5 & Gestión & Transversal\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ===================== Hoja 2 =====================
+\noindent\textbf{Hoja 2}
+
+\section*{T2.}
+
+\noindent a) Clasificación. Dibuje una tabla para E1 a E12
+
+{\small
+\begin{longtable}{@{}L{0.06\textwidth}L{0.24\textwidth}L{0.16\textwidth}L{0.46\textwidth}@{}}
+\toprule
+\textbf{ID} & \textbf{TIPO} & \textbf{DOCUMENTO} & \textbf{JUSTIFICACIÓN}\\
+\midrule
+\endhead
+E1 & Funcional & StRS & Expresa la necesidad de recibir alertas\\
+E2 & Requisito de dominio & SyRS & Establece los umbrales de protocolo\\
+E3 & Restricción & SyRS & Define la frecuencia de comunicación y el protocolo\\
+E4 & Restricción & -- & Solo establece plazo y presupuesto.\\
+E5 & Funcional & SRS & Define la generación de documentos PDF.\\
+E6 & No funcional & SyRS & Exige continuidad durante los cortes de energia\\
+E7 & No es ur requisito & -- & Describe un proceso actual\\
+E8 & No funcional & SRS & Establece el tiempo de carga\\
+E9 & Restricción tecnologica & SyRS & Determina donde se realizara la instalación y cual sistema operativo usará\\
+E10 & Funcional & SRS & Establece permisos y acciones.\\
+E11 & No funcional & SRS & Establece tiempo max. de registro.\\
+E12 & Requisito de proceso & -- & Describe y define las reuniones y la firma de documentos.\\
+\bottomrule
+\end{longtable}
+}
+
+\noindent b) Auditoria. Dibuje una tabla para B1 a B6
+
+% Las filas B3 a B6 continúan en la hoja 3.
+{\small
+\begin{longtable}{@{}L{0.05\textwidth}L{0.16\textwidth}L{0.22\textwidth}L{0.13\textwidth}L{0.36\textwidth}@{}}
+\toprule
+\textbf{ID} & \textbf{TERMINO} & \textbf{CARACTERISTICA} & \textbf{SMART} & \textbf{JUSTIFICACIÓN}\\
+\midrule
+\endhead
+B1 & veloz e intuitivo & No ambiguo y verificable & Medible & No establece valores.\\
+B2 & suficiente anticipacion & No ambiguo y verificable. & Medible & No define cuanto tiempo es suficiente\\
+B3 & todos los puntos, todo momento & Factible y no ambiguo & Realizable & Exige condiciones imposibles\\
+B4 & Ninguno & Esta bien formado & Trazable & Es especifico y verificable, pero no hay justificacion\\
+B5 & En lo posible & Singular, no ambiguo y verificable & Especifico & No determina formatos, ni condiciones\\
+B6 & Ninguno & Bien formado & Cumple & Define condición, accion y plazos\\
+\bottomrule
+\end{longtable}
+}
+
+% ===================== Hoja 3 =====================
+\noindent\textbf{Hoja 3}
+
+\section*{T3.}
+
+\noindent Redacte seis requisitos bien formados
+
+% La fila R6 continúa en la hoja 4.
+{\small
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}L{0.06\textwidth}L{0.38\textwidth}L{0.11\textwidth}L{0.11\textwidth}L{0.12\textwidth}L{0.14\textwidth}@{}}
+\toprule
+\textbf{ID} & \textbf{ENUNCIADO} & \textbf{TIPO} & \textbf{DOCUMENTO} & \textbf{FUENTE} & \textbf{M. V.}\\
+\midrule
+\endhead
+B1.a & Cuando un vecino inicie su registro, el sistema deberá permitir completar el registro para recibir alertas en un maximo de 3 minutos & No funcional & SRS & B1 - E11 & Prueba.\\
+B1.b & Cuando existan 500 usuarios conectados simultaneamente, el sistema deberá cargar el mapa de las seis estaciones en menos de 3 segundos & No funcional & SRS & B1 - E8 & Prueba\\
+B2 & Cuando el nivel del Río supere los 5,5 metros en el puente principal, el sistema deberá enviar un SMS a todos los vecinos registrados en un maximo de 2 segundos & Funcional & SRS & B2 - E2 - B6 & Prueba\\
+B3 & Durante el funcionamiento normal y cortes electricos de hasta 12 horas, el sistema deberá registrar las lecturas de las seis estaciones cada 5 minutos & Funcional & SyRS & B3 - E3 - E6 & Prueba\\
+B5 & Al finalizar cada mes, el sistema deberá permitir descargar en formato Excel los datos de las 6 estaciones & Funcional & SRS & B5, E5 & Demostración\\
+R6 & Cuando un operador autorizado solicite cancelar una alerta, el sistema deberá permitir cancelar y registrar el usuario responsable y la fecha y hora de la acción & Funcional & SRS & E10 - H4 & Prueba\\
+\bottomrule
+\end{longtable}
+}
+
+\end{document}
