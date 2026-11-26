@@ -13,6 +13,7 @@ Docente: Gleiston Cicerón Guerrero Ulloa, PhD.
 | `FORM-TL-01/` | Taller de tipos de requisitos (actividad formativa, Semana 1) | `FORM-TL-01/main.tex` |
 | `TA-IND-01/` | Trabajo individual: IEEE 29148 y tipos de requisitos de Apple Music (sumativa) | `TA-IND-01/main.tex` |
 | `EV-PRAC-01/` | Evaluación de la Unidad I (prueba práctica, transcripción fiel) | `EV-PRAC-01/main.tex` |
+| `TA-IND-02/` | Trabajo individual: priorización de requisitos con MoSCoW, Kano y votación ponderada (sumativa, dominio: gimnasio) | `TA-IND-02/main.tex` |
 
 Archivos de `FORM-TL-01/`:
 
@@ -30,6 +31,15 @@ Archivos de `EV-PRAC-01/`:
 - `main.tex`: transcripción fiel de la prueba escrita a mano.
 - `main.pdf`: PDF compilado desde `main.tex`.
 - `evidencias/`: fotografías de las hojas originales (`hoja-01.jpg` a `hoja-04.jpg`), que no se incluyen en el PDF.
+
+Archivos de `TA-IND-02/`:
+
+- `main.tex`: documento principal, que une las secciones con `\input`.
+- `secciones/`: un archivo `.tex` por sección del informe.
+- `referencias.bib`: referencias bibliográficas (estilo IEEE con `biblatex`).
+- `datos/`: respuestas del cuestionario Kano y votaciones en CSV, con sus cálculos.
+- `evidencias/MANIFIESTO.md`: registro de participantes sin datos personales.
+- `main.pdf`: PDF compilado desde `main.tex`.
 
 ## Cómo compilar
 
@@ -74,3 +84,18 @@ pdflatex main.tex
 El resultado es `EV-PRAC-01/main.pdf`. Usa la clase `IEEEtran` y los paquetes `fontenc`,
 `inputenc`, `babel` (idioma `spanish`), `lmodern`, `microtype`, `booktabs`, `float`, `array`,
 `longtable`, `url` y `hyperref`.
+
+### Compilar TA-IND-02
+
+TA-IND-02 usa bibliografía, así que se compila con `pdflatex` y `biber`. Desde la raíz del repositorio:
+
+```bash
+cd TA-IND-02
+pdflatex main.tex
+biber main
+pdflatex main.tex
+pdflatex main.tex
+```
+
+El resultado es `TA-IND-02/main.pdf`. Usa la misma clase y los mismos paquetes de TA-IND-01.
+En Overleaf hay que subir la carpeta `TA-IND-02/` completa, incluida `secciones/`.

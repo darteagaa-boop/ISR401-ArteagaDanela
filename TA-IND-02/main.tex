@@ -1,0 +1,68 @@
+\documentclass[conference,onecolumn]{IEEEtran}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage[backend=biber,style=ieee,sorting=none]{biblatex}
+\addbibresource{referencias.bib}
+\AtBeginDocument{\spanishplainpercent}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\renewcommand{\IEEEkeywordsname}{Palabras clave}
+
+\title{TA-IND-02: Priorización de requisitos con MoSCoW, Kano y votación ponderada para un sistema de gestión de gimnasio}
+\author{\IEEEauthorblockN{Danela Dayana Arteaga Alava}\IEEEauthorblockA{Carrera de Software\\
+Facultad de Ciencias de la Computación\\
+Universidad Técnica Estatal de Quevedo, Ecuador\\
+Ingeniería de Requerimientos -- ISR-401}}
+
+\begin{document}
+\maketitle
+
+\input{secciones/00-resumen}
+
+\section*{Datos generales}
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}Y@{}}
+\toprule
+\textbf{Campo} & \textbf{Detalle}\\
+\midrule
+Asignatura & Ingeniería de Requerimientos (ISR-401) · 4.\textsuperscript{o} nivel · Paralelo B\\
+Actividad & TA-IND-02 (TA-TAR-02 en el SGA) · Trabajo individual sumativo\\
+Estudiante & Arteaga Alava Danela Dayana\\
+Docente & Gleiston Cicerón Guerrero Ulloa, PhD\\
+Dominio asignado & Gimnasio: membresías, asistencia y rutinas (dominio n.\textsuperscript{o}~11 del sorteo del Paralelo B)\\
+Fecha de cierre & Sábado 28 de noviembre de 2026, 23:59\\
+Repositorio & \url{https://github.com/darteagaa-boop/ISR401-ArteagaDanela}\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\input{secciones/01-introduccion}
+\input{secciones/02-marco-conceptual}
+\input{secciones/03-requisitos}
+\input{secciones/04-moscow}
+\input{secciones/05-kano}
+\input{secciones/06-votacion}
+\input{secciones/07-comparacion}
+\input{secciones/08-decision}
+\input{secciones/09-declaracion-ia}
+
+\printbibliography[title={Referencias}]
+
+\end{document}
