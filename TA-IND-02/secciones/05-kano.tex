@@ -1,4 +1,64 @@
-% Responsable: Arteaga Alava Danela Dayana · Ronda 1
+% Responsable: Arteaga Alava Danela Dayana · Ronda 2
 \section{Análisis con el modelo de Kano}
 
-\textit{Sección en elaboración.}
+\subsection{Características evaluadas}
+
+Se eligieron 8 características que el socio percibe de forma directa, porque el cuestionario de Kano mide la satisfacción del usuario final. Cada característica se relaciona con un requisito de la Tabla~\ref{tab:requisitos}.
+
+\begin{itemize}
+\item \textbf{C1. Ingreso con código QR} (RF-05).
+\item \textbf{C2. Aviso de vencimiento} (RF-06).
+\item \textbf{C3. Rutina en la aplicación} (RF-08).
+\item \textbf{C4. Registro de medidas} (RF-09).
+\item \textbf{C5. Reserva de clases grupales} (RF-11).
+\item \textbf{C6. Congelación de membresía} (RF-12).
+\item \textbf{C7. Comprobante de pago} (RF-03).
+\item \textbf{C8. Validación rápida del ingreso} (RC-01).
+\end{itemize}
+
+\subsection{Cuestionario}
+
+Cada pregunta se responde con una de estas cinco opciones: (1) me gusta, (2) lo espero, (3) me es indiferente, (4) puedo tolerarlo y (5) me disgusta. Las preguntas impares son funcionales y las pares son disfuncionales. Las preguntas 1 y 2 corresponden a C1, las preguntas 3 y 4 a C2, y así sucesivamente hasta C8.
+
+Las preguntas aplicadas fueron las siguientes:
+
+\begin{enumerate}
+\item ¿Cómo se sentiría si pudiera ingresar al gimnasio mostrando un código QR en su celular?
+\item ¿Cómo se sentiría si no pudiera ingresar con código QR y tuviera que dictar su número de cédula?
+\item ¿Cómo se sentiría si recibiera un correo 5 días antes de que venza su membresía?
+\item ¿Cómo se sentiría si no recibiera ningún aviso antes de que venza su membresía?
+\item ¿Cómo se sentiría si pudiera ver en su celular la rutina que le toca cada día?
+\item ¿Cómo se sentiría si no pudiera ver su rutina en el celular y tuviera que pedirla al entrenador?
+\item ¿Cómo se sentiría si el sistema guardara sus medidas corporales y su fecha para ver su avance?
+\item ¿Cómo se sentiría si el sistema no guardara sus medidas corporales?
+\item ¿Cómo se sentiría si pudiera reservar su cupo en una clase grupal?
+\item ¿Cómo se sentiría si no pudiera reservar y tuviera que llegar temprano para alcanzar cupo?
+\item ¿Cómo se sentiría si pudiera congelar su membresía entre 7 y 30 días sin perder esos días?
+\item ¿Cómo se sentiría si no pudiera congelar su membresía y perdiera los días que no asiste?
+\item ¿Cómo se sentiría si cada pago quedara registrado con un número de comprobante?
+\item ¿Cómo se sentiría si sus pagos no quedaran registrados con un comprobante?
+\item ¿Cómo se sentiría si la validación de su ingreso tardara como máximo 2 segundos?
+\item ¿Cómo se sentiría si la validación de su ingreso tardara más de 2 segundos y se formaran filas?
+\end{enumerate}
+
+\subsection{Tabla de evaluación}
+
+La Tabla~\ref{tab:evaluacion-kano} cruza la respuesta funcional, con la respuesta disfuncional para obtener la categoría de cada respuesta \cite{kano1984}.
+
+\begin{table}[H]
+\centering\footnotesize
+\caption{Tabla de evaluación de Kano}\label{tab:evaluacion-kano}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Funcional $\backslash$ Disfuncional} & \textbf{1. Me gusta} & \textbf{2. Lo espero} & \textbf{3. Indiferente} & \textbf{4. Lo tolero} & \textbf{5. Me disgusta}\\
+\midrule
+1. Me gusta & Q & A & A & A & O\\
+2. Lo espero & R & I & I & I & M\\
+3. Indiferente & R & I & I & I & M\\
+4. Lo tolero & R & I & I & I & M\\
+5. Me disgusta & R & R & R & R & Q\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A: atractiva. O: unidimensional. M: obligatoria. I: indiferente. R: inversa. Q: cuestionable.

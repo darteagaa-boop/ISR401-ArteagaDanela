@@ -1,4 +1,56 @@
-% Responsable: Arteaga Alava Danela Dayana · Ronda 1
+% Responsable: Arteaga Alava Danela Dayana · Ronda 2
 \section{Priorización con MoSCoW}
 
-\textit{Sección en elaboración.}
+El esfuerzo de cada requisito se estimó en puntos relativos con la serie 1, 2, 3, 5 y 8, donde 1 es el menor esfuerzo. La Tabla~\ref{tab:moscow} muestra la categoría de cada requisito con su justificación y la Tabla~\ref{tab:esfuerzo} resume el esfuerzo por categoría.
+
+{\footnotesize
+\begin{longtable}{@{}>{\centering\arraybackslash}p{0.07\textwidth}>{\centering\arraybackslash}p{0.08\textwidth}>{\centering\arraybackslash}p{0.09\textwidth}L{0.66\textwidth}@{}}
+\caption{Clasificación MoSCoW de los 20 requisitos}\label{tab:moscow}\\
+\toprule
+\textbf{ID} & \textbf{Esfuerzo} & \textbf{Categoría} & \textbf{Justificación}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{ID} & \textbf{Esfuerzo} & \textbf{Categoría} & \textbf{Justificación}\\
+\midrule
+\endhead
+RF-01 & 3 & Must & Sin el registro del socio no se puede vender ni controlar ninguna membresía.\\
+RF-02 & 3 & Must & La membresía es lo que vende el gimnasio y define quién puede entrenar.\\
+RF-03 & 3 & Must & El pago registrado es la base del control de ingresos y de la vigencia.\\
+RF-04 & 2 & Must & Recepción necesita saber en el momento si el socio puede ingresar.\\
+RF-05 & 5 & Must & El control de asistencia es uno de los tres procesos del dominio asignado.\\
+RF-06 & 3 & Should & Reduce las membresías que vencen sin renovarse, pero recepción puede avisar en persona.\\
+RF-07 & 5 & Should & Las rutinas son parte del dominio, aunque el entrenador puede entregarlas en papel al inicio.\\
+RF-08 & 8 & Could & Exige desarrollar una aplicación móvil, lo que eleva el esfuerzo de la primera versión.\\
+RF-09 & 3 & Could & Ayuda al seguimiento del socio, pero no afecta la operación diaria.\\
+RF-10 & 3 & Should & El administrador lo usa para decidir, aunque puede obtenerlo del registro de pagos.\\
+RF-11 & 5 & Could & Solo es útil si el gimnasio ofrece clases grupales con cupo limitado.\\
+RF-12 & 2 & Should & Evita reclamos por días no usados, aunque la fecha se puede ajustar a mano.\\
+RC-01 & 2 & Must & Una validación lenta forma filas en recepción en las horas de mayor afluencia.\\
+RC-02 & 3 & Should & El sistema debe estar disponible, pero una caída breve se cubre con un registro manual.\\
+RC-03 & 3 & Must & Los datos personales de los socios están protegidos por la LOPDP \cite{lopdp2021}.\\
+RC-04 & 2 & Should & Facilita que el personal nuevo de recepción use el sistema sin una capacitación larga.\\
+RC-05 & 3 & Could & Depende de que exista la aplicación móvil de RF-08.\\
+RC-06 & 5 & Won't & El funcionamiento sin conexión es costoso para una primera versión.\\
+RC-07 & 2 & Should & Protege el cálculo de vencimientos, que afecta directamente a los cobros.\\
+RC-08 & 1 & Must & Evita que otra persona use una sesión abierta en el computador de recepción.\\
+\bottomrule
+\end{longtable}
+}
+
+\begin{table}[H]
+\centering\footnotesize
+\caption{Esfuerzo por categoría MoSCoW}\label{tab:esfuerzo}
+\begin{tabularx}{\textwidth}{@{}lcYcc@{}}
+\toprule
+\textbf{Categoría} & \textbf{N.\textsuperscript{o}} & \textbf{Requisitos} & \textbf{Esfuerzo} & \textbf{\% del total}\\
+\midrule
+Must & 8 & RF-01, RF-02, RF-03, RF-04, RF-05, RC-01, RC-03, RC-08 & 22 & 33,3 \%\\
+Should & 7 & RF-06, RF-07, RF-10, RF-12, RC-02, RC-04, RC-07 & 20 & 30,3 \%\\
+Could & 4 & RF-08, RF-09, RF-11, RC-05 & 19 & 28,8 \%\\
+Won't & 1 & RC-06 & 5 & 7,6 \%\\
+\midrule
+Total & 20 &  & 66 & 100,0 \%\\
+\bottomrule
+\end{tabularx}
+\end{table}

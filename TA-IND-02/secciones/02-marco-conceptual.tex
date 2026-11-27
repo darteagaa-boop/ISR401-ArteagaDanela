@@ -1,4 +1,26 @@
-% Responsable: Arteaga Alava Danela Dayana · Ronda 1
+% Responsable: Arteaga Alava Danela Dayana · Ronda 2
 \section{Marco conceptual}
 
-\textit{Sección en elaboración.}
+\subsection{Requisito y su redacción}
+
+La norma ISO/IEC/IEEE 29148 define un requisito como un enunciado que traduce o expresa una necesidad junto con sus restricciones y condiciones asociadas \cite[\nopp cl.~3.1.19]{ieee29148}. Para redactarlo, la cláusula 5.2.4 indica usar la palabra obligatoria shall, que en este trabajo se traduce como deberá, escribir en voz activa y con enunciados positivos, y evitar la forma shall be able to \cite[\nopp cl.~5.2.4]{ieee29148}. Cada requisito debe ser necesario, no ambiguo, singular, factible y verificable, entre otras características de la cláusula 5.2.5 \cite[\nopp cl.~5.2.5]{ieee29148}. Los requisitos de calidad se clasifican según las nueve características del modelo de calidad de producto de ISO/IEC 25010:2023 \cite{iso25010} y cada uno incluye un valor medible.
+
+\subsection{Priorización de requisitos}
+
+Priorizar consiste en decidir qué requisitos se implementan primero cuando el tiempo y los recursos no alcanzan para todos. Wiegers y Beatty señalan que la prioridad debe acordarse con las partes interesadas y considerar el valor que aporta cada requisito, su costo y su riesgo \cite[\nopp cap.~16]{wiegers2013}. Por eso la prioridad no debería ser una opinión del analista.
+
+\subsection{MoSCoW}
+
+La técnica MoSCoW, asociada al método CASE de Clegg y Barker \cite{clegg1994}, agrupa los requisitos en cuatro categorías. Must (debe tener) reúne lo indispensable para que el sistema funcione. Should (debería tener) agrupa lo importante que puede esperar a una entrega cercana. Could (podría tener) contiene lo deseable si sobran recursos. Won't (no tendrá esta vez) deja fuera, de forma acordada, lo que se pospone. Esta técnica produce un orden por grupos, así que varios requisitos comparten la misma posición.
+
+\subsection{Modelo de Kano}
+
+El modelo de Kano parte de que la satisfacción del cliente no crece de forma lineal con el cumplimiento de una característica \cite{kano1984}. Para cada característica se hacen dos preguntas. La pregunta funcional consulta cómo se siente la persona si el sistema tiene la característica y la pregunta disfuncional consulta cómo se siente si no la tiene. La combinación de ambas respuestas en la tabla de evaluación, clasifica la característica como obligatoria (M), unidimensional (O), atractiva (A), indiferente (I), inversa (R) o cuestionable (Q). La categoría final de cada característica es la que reúne más respuestas.
+
+\subsection{Votación ponderada de 100 puntos}
+
+En la votación de 100 puntos cada participante reparte 100 puntos entre los requisitos según la importancia que les da \cite[\nopp cap.~16]{wiegers2013}. La suma de los puntos de cada requisito produce un orden de prioridad, a diferencia de MoSCoW, esta técnica obliga a renunciar a algo porque los puntos que se dan a un requisito ya no se pueden dar a otro.
+
+\subsection{Correlación de rangos de Spearman}
+
+La correlación de rangos de Spearman mide qué tanto coinciden dos órdenes \cite{spearman1904}. Su valor va de $-1$, cuando los órdenes son opuestos, a $+1$, cuando son iguales. Como MoSCoW produce empates, a cada grupo se le asigna el rango promedio de las posiciones que ocupa y el coeficiente se calcula como la correlación de Pearson entre los rangos. La fórmula simplificada $\rho = 1 - 6\sum d^2 / \bigl(n(n^2 - 1)\bigr)$ solo es exacta cuando no hay empates.

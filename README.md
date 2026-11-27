@@ -99,3 +99,19 @@ pdflatex main.tex
 
 El resultado es `TA-IND-02/main.pdf`. Usa la misma clase y los mismos paquetes de TA-IND-01.
 En Overleaf hay que subir la carpeta `TA-IND-02/` completa, incluida `secciones/`.
+
+### Regenerar los cálculos de TA-IND-02
+
+Los cálculos de Kano, de la votación de 100 puntos y de la correlación de Spearman se
+obtienen con Python 3 (solo biblioteca estándar). Desde la carpeta `TA-IND-02`:
+
+```bash
+python datos/calculos.py
+```
+
+El script lee `datos/kano_respuestas.csv`, `datos/votacion.csv`, `datos/moscow.csv` y
+`datos/caracteristicas_kano.csv`, y escribe `datos/resultados_kano.csv`,
+`datos/resultados_votacion.csv` y `datos/resultados_comparacion.csv`.
+
+`datos/TA-IND-02_datos.xlsx` es una copia de los CSV en un libro de Excel, con una hoja por
+archivo, para revisarlos en columnas. Los archivos de origen son los CSV.

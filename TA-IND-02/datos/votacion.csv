@@ -1,1 +1,61 @@
-participante,tipo_participante,requisito,puntos
+participante,perfil,requisito,puntos
+P06,Administrador y propietario del gimnasio.,RF-01,8
+P06,Administrador y propietario del gimnasio.,RF-02,12
+P06,Administrador y propietario del gimnasio.,RF-03,15
+P06,Administrador y propietario del gimnasio.,RF-04,6
+P06,Administrador y propietario del gimnasio.,RF-05,5
+P06,Administrador y propietario del gimnasio.,RF-06,8
+P06,Administrador y propietario del gimnasio.,RF-07,0
+P06,Administrador y propietario del gimnasio.,RF-08,0
+P06,Administrador y propietario del gimnasio.,RF-09,0
+P06,Administrador y propietario del gimnasio.,RF-10,14
+P06,Administrador y propietario del gimnasio.,RF-11,2
+P06,Administrador y propietario del gimnasio.,RF-12,4
+P06,Administrador y propietario del gimnasio.,RC-01,3
+P06,Administrador y propietario del gimnasio.,RC-02,6
+P06,Administrador y propietario del gimnasio.,RC-03,7
+P06,Administrador y propietario del gimnasio.,RC-04,2
+P06,Administrador y propietario del gimnasio.,RC-05,0
+P06,Administrador y propietario del gimnasio.,RC-06,0
+P06,Administrador y propietario del gimnasio.,RC-07,5
+P06,Administrador y propietario del gimnasio.,RC-08,3
+P07,Entrenador encargado de las rutinas de los socios.,RF-01,6
+P07,Entrenador encargado de las rutinas de los socios.,RF-02,3
+P07,Entrenador encargado de las rutinas de los socios.,RF-03,0
+P07,Entrenador encargado de las rutinas de los socios.,RF-04,3
+P07,Entrenador encargado de las rutinas de los socios.,RF-05,4
+P07,Entrenador encargado de las rutinas de los socios.,RF-06,2
+P07,Entrenador encargado de las rutinas de los socios.,RF-07,25
+P07,Entrenador encargado de las rutinas de los socios.,RF-08,18
+P07,Entrenador encargado de las rutinas de los socios.,RF-09,15
+P07,Entrenador encargado de las rutinas de los socios.,RF-10,0
+P07,Entrenador encargado de las rutinas de los socios.,RF-11,8
+P07,Entrenador encargado de las rutinas de los socios.,RF-12,0
+P07,Entrenador encargado de las rutinas de los socios.,RC-01,2
+P07,Entrenador encargado de las rutinas de los socios.,RC-02,3
+P07,Entrenador encargado de las rutinas de los socios.,RC-03,6
+P07,Entrenador encargado de las rutinas de los socios.,RC-04,0
+P07,Entrenador encargado de las rutinas de los socios.,RC-05,5
+P07,Entrenador encargado de las rutinas de los socios.,RC-06,0
+P07,Entrenador encargado de las rutinas de los socios.,RC-07,0
+P07,Entrenador encargado de las rutinas de los socios.,RC-08,0
+P08,Recepcionista que registra ingresos y cobros.,RF-01,10
+P08,Recepcionista que registra ingresos y cobros.,RF-02,8
+P08,Recepcionista que registra ingresos y cobros.,RF-03,10
+P08,Recepcionista que registra ingresos y cobros.,RF-04,15
+P08,Recepcionista que registra ingresos y cobros.,RF-05,14
+P08,Recepcionista que registra ingresos y cobros.,RF-06,6
+P08,Recepcionista que registra ingresos y cobros.,RF-07,0
+P08,Recepcionista que registra ingresos y cobros.,RF-08,0
+P08,Recepcionista que registra ingresos y cobros.,RF-09,0
+P08,Recepcionista que registra ingresos y cobros.,RF-10,0
+P08,Recepcionista que registra ingresos y cobros.,RF-11,3
+P08,Recepcionista que registra ingresos y cobros.,RF-12,5
+P08,Recepcionista que registra ingresos y cobros.,RC-01,12
+P08,Recepcionista que registra ingresos y cobros.,RC-02,5
+P08,Recepcionista que registra ingresos y cobros.,RC-03,0
+P08,Recepcionista que registra ingresos y cobros.,RC-04,6
+P08,Recepcionista que registra ingresos y cobros.,RC-05,0
+P08,Recepcionista que registra ingresos y cobros.,RC-06,4
+P08,Recepcionista que registra ingresos y cobros.,RC-07,0
+P08,Recepcionista que registra ingresos y cobros.,RC-08,2

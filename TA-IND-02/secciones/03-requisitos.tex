@@ -1,4 +1,39 @@
-% Responsable: Arteaga Alava Danela Dayana · Ronda 1
+% Responsable: Arteaga Alava Danela Dayana · Ronda 2
 \section{Requisitos del sistema}
 
-\textit{Sección en elaboración.}
+La Tabla~\ref{tab:requisitos} presenta los 20 requisitos del sistema. Los 12 primeros son funcionales (RF) y los 8 restantes son de calidad (RC). Cada requisito de calidad tiene un valor medible y se asocia a una característica de ISO/IEC 25010:2023 \cite{iso25010}. Cada requisito tiene un identificador único, como recomienda la cláusula 5.2.8.2 \cite[\nopp cl.~5.2.8.2]{ieee29148}.
+
+{\footnotesize
+\begin{longtable}{@{}L{0.07\textwidth}L{0.62\textwidth}L{0.25\textwidth}@{}}
+\caption{Requisitos del sistema de gestión del gimnasio}\label{tab:requisitos}\\
+\toprule
+\textbf{ID} & \textbf{Enunciado} & \textbf{Tipo (ISO/IEC 25010:2023)}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{ID} & \textbf{Enunciado} & \textbf{Tipo (ISO/IEC 25010:2023)}\\
+\midrule
+\endhead
+RF-01 & El sistema deberá registrar a un socio con sus nombres, número de cédula, fecha de nacimiento, teléfono y un contacto de emergencia. & Funcional\\
+RF-02 & El sistema deberá registrar la contratación de una membresía con el plan elegido (mensual, trimestral o anual), la fecha de inicio y la fecha de vencimiento. & Funcional\\
+RF-03 & El sistema deberá registrar el pago de una membresía con el monto, la fecha, el método de pago y el número de comprobante. & Funcional\\
+RF-04 & El sistema deberá mostrar en recepción el estado de la membresía del socio (activa o vencida) cuando se registre su ingreso. & Funcional\\
+RF-05 & El sistema deberá registrar la fecha y la hora de ingreso del socio al leer su código QR o al digitar su número de cédula. & Funcional\\
+RF-06 & El sistema deberá enviar al socio un aviso por correo electrónico 5 días antes de la fecha de vencimiento de su membresía. & Funcional\\
+RF-07 & El sistema deberá registrar la rutina que el entrenador asigne a un socio, con ejercicios, series, repeticiones y días de entrenamiento. & Funcional\\
+RF-08 & El sistema deberá mostrar al socio, en una aplicación móvil, la rutina que le corresponde para el día en curso. & Funcional\\
+RF-09 & El sistema deberá registrar las medidas corporales del socio (peso, porcentaje de grasa y perímetros) junto con la fecha de la evaluación. & Funcional\\
+RF-10 & El sistema deberá generar un reporte mensual de ingresos por membresías agrupado por tipo de plan. & Funcional\\
+RF-11 & El sistema deberá registrar la reserva de un socio en una clase grupal hasta completar el cupo máximo definido para esa clase. & Funcional\\
+RF-12 & El sistema deberá extender la fecha de vencimiento de una membresía en el número de días que el socio la congele, con un mínimo de 7 y un máximo de 30 días por año. & Funcional\\
+RC-01 & El sistema deberá mostrar el estado de la membresía en un máximo de 2 segundos desde la lectura del código QR, en el 95 \% de los ingresos, con hasta 30 ingresos registrados en un mismo minuto. & Eficiencia de desempeño (comportamiento temporal)\\
+RC-02 & El sistema deberá estar disponible al menos el 99 \% del tiempo de cada mes, sin contar los mantenimientos programados fuera del horario de atención. & Fiabilidad (disponibilidad)\\
+RC-03 & El sistema deberá restringir la consulta de los datos personales y de las medidas corporales de un socio a los roles de administrador y de entrenador asignado, con cero accesos permitidos a otros roles en las pruebas de autorización. & Seguridad (confidencialidad)\\
+RC-04 & El sistema deberá permitir que un recepcionista nuevo registre a un socio con su membresía en un máximo de 3 minutos, después de una capacitación de 30 minutos, en al menos el 90 \% de los intentos. & Capacidad de interacción (aprendizaje)\\
+RC-05 & La aplicación móvil del socio deberá funcionar en Android 10 o superior y en iOS 15 o superior. & Flexibilidad (adaptabilidad)\\
+RC-06 & El sistema deberá registrar los ingresos sin conexión a internet y sincronizarlos con el servidor en un máximo de 5 minutos después de restablecida la conexión. & Fiabilidad (tolerancia a fallos)\\
+RC-07 & El módulo que calcula las fechas de vencimiento deberá tener una cobertura de pruebas unitarias de al menos el 80 \% de sus líneas de código. & Mantenibilidad (capacidad de prueba)\\
+RC-08 & El sistema deberá cerrar la sesión de un usuario del personal después de 15 minutos sin actividad. & Seguridad (autenticidad)\\
+\bottomrule
+\end{longtable}
+}

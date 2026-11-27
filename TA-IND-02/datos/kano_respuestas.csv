@@ -1,1 +1,41 @@
-participante,tipo_participante,caracteristica,respuesta_funcional,respuesta_disfuncional,categoria_kano
+participante,perfil,caracteristica,respuesta_funcional,respuesta_disfuncional,categoria_kano
+P01,Socio estudiante universitario que entrena 5 días por semana en la tarde.,C1,1,4,A
+P01,Socio estudiante universitario que entrena 5 días por semana en la tarde.,C2,3,4,I
+P01,Socio estudiante universitario que entrena 5 días por semana en la tarde.,C3,1,5,O
+P01,Socio estudiante universitario que entrena 5 días por semana en la tarde.,C4,1,4,A
+P01,Socio estudiante universitario que entrena 5 días por semana en la tarde.,C5,3,3,I
+P01,Socio estudiante universitario que entrena 5 días por semana en la tarde.,C6,1,5,O
+P01,Socio estudiante universitario que entrena 5 días por semana en la tarde.,C7,2,5,M
+P01,Socio estudiante universitario que entrena 5 días por semana en la tarde.,C8,2,5,M
+P02,Socia que trabaja en oficina y entrena 3 días por semana temprano en la mañana.,C1,1,3,A
+P02,Socia que trabaja en oficina y entrena 3 días por semana temprano en la mañana.,C2,1,4,A
+P02,Socia que trabaja en oficina y entrena 3 días por semana temprano en la mañana.,C3,1,3,A
+P02,Socia que trabaja en oficina y entrena 3 días por semana temprano en la mañana.,C4,3,3,I
+P02,Socia que trabaja en oficina y entrena 3 días por semana temprano en la mañana.,C5,2,4,I
+P02,Socia que trabaja en oficina y entrena 3 días por semana temprano en la mañana.,C6,2,5,M
+P02,Socia que trabaja en oficina y entrena 3 días por semana temprano en la mañana.,C7,2,5,M
+P02,Socia que trabaja en oficina y entrena 3 días por semana temprano en la mañana.,C8,1,5,O
+P03,Socio de más de 50 años que entrena por recomendación médica.,C1,3,3,I
+P03,Socio de más de 50 años que entrena por recomendación médica.,C2,1,5,O
+P03,Socio de más de 50 años que entrena por recomendación médica.,C3,1,3,A
+P03,Socio de más de 50 años que entrena por recomendación médica.,C4,2,5,M
+P03,Socio de más de 50 años que entrena por recomendación médica.,C5,3,4,I
+P03,Socio de más de 50 años que entrena por recomendación médica.,C6,1,5,O
+P03,Socio de más de 50 años que entrena por recomendación médica.,C7,2,5,M
+P03,Socio de más de 50 años que entrena por recomendación médica.,C8,3,4,I
+P04,"Socia nueva, con menos de un mes en el gimnasio.",C1,1,3,A
+P04,"Socia nueva, con menos de un mes en el gimnasio.",C2,1,3,A
+P04,"Socia nueva, con menos de un mes en el gimnasio.",C3,1,4,A
+P04,"Socia nueva, con menos de un mes en el gimnasio.",C4,3,3,I
+P04,"Socia nueva, con menos de un mes en el gimnasio.",C5,1,4,A
+P04,"Socia nueva, con menos de un mes en el gimnasio.",C6,1,4,A
+P04,"Socia nueva, con menos de un mes en el gimnasio.",C7,3,5,M
+P04,"Socia nueva, con menos de un mes en el gimnasio.",C8,2,5,M
+P05,Socio que asiste sobre todo a clases grupales.,C1,2,4,I
+P05,Socio que asiste sobre todo a clases grupales.,C2,1,4,A
+P05,Socio que asiste sobre todo a clases grupales.,C3,3,3,I
+P05,Socio que asiste sobre todo a clases grupales.,C4,3,4,I
+P05,Socio que asiste sobre todo a clases grupales.,C5,1,5,O
+P05,Socio que asiste sobre todo a clases grupales.,C6,1,5,O
+P05,Socio que asiste sobre todo a clases grupales.,C7,2,4,I
+P05,Socio que asiste sobre todo a clases grupales.,C8,2,5,M

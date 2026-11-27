@@ -1,0 +1,9 @@
+caracteristica,requisito,nombre,A,O,M,I,R,Q,categoria_final
+C1,RF-05,Ingreso con código QR,3,0,0,2,0,0,A
+C2,RF-06,Aviso de vencimiento,3,1,0,1,0,0,A
+C3,RF-08,Rutina en la aplicación,3,1,0,1,0,0,A
+C4,RF-09,Registro de medidas,1,0,1,3,0,0,I
+C5,RF-11,Reserva de clases grupales,1,1,0,3,0,0,I
+C6,RF-12,Congelación de membresía,1,3,1,0,0,0,O
+C7,RF-03,Comprobante de pago,0,0,4,1,0,0,M
+C8,RC-01,Validación rápida del ingreso,0,1,3,1,0,0,M
