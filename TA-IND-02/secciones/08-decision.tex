@@ -1,4 +1,30 @@
-% Responsable: Arteaga Alava Danela Dayana · Ronda 1
+% Responsable: Arteaga Alava Danela Dayana · Ronda 3
 \section{Decisión para la primera versión}
 
-\textit{Sección en elaboración.}
+La primera versión incluye los requisitos Must y Should, suman 42 de los 66 puntos de esfuerzo (63,6 \%). La Tabla~\ref{tab:primera-version} resume la decisión.
+
+\begin{table}[H]
+\centering\footnotesize
+\caption{Requisitos de la primera versión}\label{tab:primera-version}
+\begin{tabularx}{\textwidth}{@{}L{0.24\textwidth}Yc@{}}
+\toprule
+\textbf{Decisión} & \textbf{Requisitos} & \textbf{Esfuerzo}\\
+\midrule
+Incluidos (Must) & RF-01, RF-02, RF-03, RF-04, RF-05, RC-01, RC-03, RC-08 & 22\\
+Incluidos (Should) & RF-06, RF-07, RF-10, RF-12, RC-02, RC-04, RC-07 & 20\\
+Fuera de la primera versión & RF-08, RF-09, RF-11, RC-05, RC-06 & 24\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Los requisitos Must se mantienen aunque RC-03 y RC-08 tuvieron pocos votos, porque protegen los datos personales y el acceso al sistema. Entre los Should, RF-07 tiene el mayor respaldo en la votación, RF-06 es atractivo en Kano y RF-12 es unidimensional, así que su ausencia molestaría a los socios.
+
+Quedan fuera los siguientes requisitos:
+
+\begin{enumerate}
+\item \textbf{RF-08 y RC-05:} La rutina en la aplicación es atractiva en Kano y ocupa el rango 7 en la votación, pero exige construir una aplicación móvil (8 puntos de esfuerzo más 3 de RC-05). En la primera versión el entrenador registra la rutina (RF-07) y la entrega al socio. RF-08 queda como el primer requisito de la segunda versión.
+\item \textbf{RF-09 y RF-11:} Son indiferentes para la mayoría de los socios en Kano y están en Could.
+\item \textbf{RC-06:} Quedó en Won't y fue el último en la votación, además de tener un esfuerzo alto.
+\end{enumerate}
+
+Esta decisión tiene límites, ya que la votación tuvo solo tres participantes y el esfuerzo fue estimado por la autora sin un equipo de desarrollo. Con más participantes, el peso de un solo voto, como el del entrenador en RF-07 y RF-08, sería menor.

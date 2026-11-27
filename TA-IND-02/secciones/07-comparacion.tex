@@ -1,4 +1,59 @@
-% Responsable: Arteaga Alava Danela Dayana · Ronda 1
+% Responsable: Arteaga Alava Danela Dayana · Ronda 3
 \section{Comparación de los tres órdenes}
 
-\textit{Sección en elaboración.}
+La Tabla~\ref{tab:comparacion} reúne, para cada requisito, su categoría MoSCoW, su rango en MoSCoW, su total y rango en la votación y su categoría de Kano cuando fue evaluado. Los cálculos están en \texttt{datos/resultados\_comparacion.csv}.
+
+{\footnotesize
+\begin{longtable}{@{}>{\centering\arraybackslash}p{0.12\textwidth}>{\centering\arraybackslash}p{0.11\textwidth}>{\centering\arraybackslash}p{0.13\textwidth}>{\centering\arraybackslash}p{0.10\textwidth}>{\centering\arraybackslash}p{0.14\textwidth}>{\centering\arraybackslash}p{0.12\textwidth}>{\centering\arraybackslash}p{0.12\textwidth}@{}}
+\caption{Comparación de MoSCoW, votación y Kano}\label{tab:comparacion}\\
+\toprule
+\textbf{Requisito} & \textbf{MoSCoW} & \textbf{Rango MoSCoW} & \textbf{Puntos} & \textbf{Rango votación} & \textbf{$d^2$} & \textbf{Kano}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Requisito} & \textbf{MoSCoW} & \textbf{Rango MoSCoW} & \textbf{Puntos} & \textbf{Rango votación} & \textbf{$d^2$} & \textbf{Kano}\\
+\midrule
+\endhead
+RF-01 & Must & 4,5 & 24 & 3,5 & 1,00 & ---\\
+RF-02 & Must & 4,5 & 23 & 5,5 & 1,00 & ---\\
+RF-03 & Must & 4,5 & 25 & 1,5 & 9,00 & M\\
+RF-04 & Must & 4,5 & 24 & 3,5 & 1,00 & ---\\
+RF-05 & Must & 4,5 & 23 & 5,5 & 1,00 & A\\
+RC-01 & Must & 4,5 & 17 & 8 & 12,25 & M\\
+RC-03 & Must & 4,5 & 13 & 13,5 & 81,00 & ---\\
+RC-08 & Must & 4,5 & 5 & 18 & 182,25 & ---\\
+RF-06 & Should & 12 & 16 & 9 & 9,00 & A\\
+RF-07 & Should & 12 & 25 & 1,5 & 110,25 & ---\\
+RF-10 & Should & 12 & 14 & 11,5 & 0,25 & ---\\
+RF-12 & Should & 12 & 9 & 15 & 9,00 & O\\
+RC-02 & Should & 12 & 14 & 11,5 & 0,25 & ---\\
+RC-04 & Should & 12 & 8 & 16 & 16,00 & ---\\
+RC-07 & Should & 12 & 5 & 18 & 36,00 & ---\\
+RF-08 & Could & 17,5 & 18 & 7 & 110,25 & A\\
+RF-09 & Could & 17,5 & 15 & 10 & 56,25 & I\\
+RF-11 & Could & 17,5 & 13 & 13,5 & 16,00 & I\\
+RC-05 & Could & 17,5 & 5 & 18 & 0,25 & ---\\
+RC-06 & Won't & 20 & 4 & 20 & 0,00 & ---\\
+\bottomrule
+\end{longtable}
+}
+
+\subsection{Correlación de Spearman entre MoSCoW y la votación}
+
+Con los rangos promedio de la Tabla~\ref{tab:comparacion}, la correlación de Spearman entre MoSCoW y la votación es $\rho = 0{,}479$ ($n = 20$). Si se usara la fórmula simplificada sin corregir los empates, el resultado sería 0,510, por lo que la corrección sí cambia el valor. Una correlación de 0,479 indica una coincidencia positiva y moderada, los dos órdenes van en la misma dirección en general, pero difieren en varios requisitos.
+
+\subsection{Coincidencias}
+
+Los cinco requisitos funcionales del grupo Must (RF-01 a RF-05) ocupan también los seis primeros lugares de la votación junto con RF-07, RC-06 quedó en Won't y también fue el último en la votación. En Kano, las dos características obligatorias (C7 y C8) corresponden a requisitos Must, lo que confirma que el pago con comprobante y la validación rápida son la base del sistema.
+
+\subsection{Discrepancias y su explicación}
+
+\begin{enumerate}
+\item \textbf{RC-08 y RC-03 (Must en MoSCoW, rangos 18 y 13,5 en la votación):} Son requisitos de seguridad que ningún participante ve en su trabajo diario, por eso recibieron pocos puntos. En MoSCoW se clasificaron como Must por la protección de datos personales y el riesgo de una sesión abierta en recepción, por eso la votación mide lo que cada persona percibe y no siempre capta las obligaciones legales o técnicas.
+\item \textbf{RF-07 y RF-08 (Should y Could en MoSCoW, rangos 1,5 y 7 en la votación):} Su posición alta se debe casi por completo al entrenador, que les dio 43 puntos. Esto muestra una debilidad de la votación de 100 puntos con pocos participantes, ya que una sola persona que concentra sus puntos puede subir un requisito al primer lugar.
+\item \textbf{RF-05 (Must en MoSCoW y atractiva en Kano):} Para el socio, ingresar con código QR es un valor agregado que no espera. Para el gimnasio, registrar la asistencia es indispensable. La diferencia se explica porque Kano evaluó la forma de ingreso y MoSCoW evaluó la función de registrar la asistencia.
+\item \textbf{RF-12 (Should en MoSCoW, rango 15 en la votación y unidimensional en Kano):} El personal le dio pocos puntos, pero los socios la valoran y su ausencia les causa insatisfacción. Es un caso en que la opinión del usuario final no aparece en la votación del personal.
+\item \textbf{RF-09 y RF-11 (Could en MoSCoW e indiferentes en Kano):} Las dos técnicas coinciden en que no son prioritarias para el socio, RF-09 subió al rango 10 en la votación solo por los puntos del entrenador.
+\end{enumerate}
+
+Cada técnica prioriza con un criterio distinto, MoSCoW parte del juicio del analista sobre lo indispensable, el esfuerzo y las obligaciones. Kano mide la satisfacción del usuario final y separa lo básico de lo que sorprende. La votación de 100 puntos refleja los intereses de cada rol y depende mucho de cuántas personas votan, por eso conviene combinar las tres antes de decidir.
